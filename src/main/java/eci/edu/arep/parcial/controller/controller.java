@@ -14,19 +14,19 @@ public class Controller {
     @Autowired
     Services services;
 
-    @PostMapping("/sum")
-    public Float sum( ){
-        return null;
+    @PostMapping("/plus")
+    public Float plus(Float a, Float b ){
+        return services.plus(a, b);
     }
 
     @PostMapping("/minus")
-    public Float minus( ){
-        return null;
+    public Float minus(Float a, Float b ){
+        return services.minus(a, b);
     }
 
     @PostMapping("/square")
-    public Float square(){
-        return null;
+    public Float square(Float a){
+        return services.square(a);
     }
     
 
