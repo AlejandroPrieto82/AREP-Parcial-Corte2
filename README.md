@@ -25,3 +25,8 @@
 ![alt text](image.png)  
 **Este es mi codigo, para "forzar" a que me responda la maquina si alguna de las 2 instancias no sirve**
 
+---
+
+## Motivo por el que no acabe
+Honestamente, no me dio el tiempo porque me enrede haciendo el codigo que debia, y no me dio para subirlo a docker y de ahi pasarlo al EC2, ya que, con esto funcionando, podiamos llegar a generar el resultado que queriamos, 
+
