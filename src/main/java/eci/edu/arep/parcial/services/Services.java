@@ -3,7 +3,7 @@ package eci.edu.arep.parcial.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class servcices implements servicesInterface{
+public class Services implements ServicesInterface{
 
     @Override
     public Float minus(float a, float b) {
@@ -16,7 +16,7 @@ public class servcices implements servicesInterface{
     }
 
     @Override
-    public Float square(int a) {
+    public Float square(float a) {
         float b = a*a;
         return b;
     }    
