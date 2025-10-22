@@ -24,7 +24,7 @@ public class Controller {
     @GetMapping("/fibwin")
     public ResponseEntity<String> fibwin(@RequestParam int value){
         try {
-            return ResponseEntity.ok("'operation':'Fibonacci con ventana K=3,\n'input': "+value+",\n'output: "+services.fibwin(value));
+            return ResponseEntity.ok("operation: Fibonacci con ventana K=3,\ninput: "+value+",\noutput: "+services.fibwin(value));
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Numero menor a 2");
