@@ -16,7 +16,7 @@
     <input type="number" id="number" value=2 min="2" />
     <br />
     <br />
-    <input type="button" value="fibwin" onclick=fibwin(number) />
+    <input type="button" value="fibwin" onclick=fibwin1(number.value) />
   </div>
   <br />
   <br />
@@ -25,15 +25,24 @@
 
 
   <script>
+    url1 = "";
+    url2 = "http://localhost:8080";
 
-    function fibwin(a) {
-      url1 = "";
-      url2 = "";
-
-      fetch(url1 + "/mathServices/fibwin?value=" + a.value, { method: "GET" })
+    function fibwin1(a) {
+      fetch(url1 + "/mathServices/fibwin?value=" + a, { method: "GET" })
         .then((x) => x.text())
-        .then((x) => (document.getElementById('solution').innerHTML = x));
+        .then((x) => (document.getElementById('solution').innerHTML = x))
+        .catch(fibwin2(a));
     }
+
+    function fibwin2(a) {
+      fetch(url2 + "/mathServices/fibwin?value=" + a, { method: "GET" })
+        .then((x) => x.text())
+        .then((x) => (document.getElementById('solution').innerHTML = x))
+        .catch(fibwin1(a));
+    }
+
+
 
   </script>
 </body>

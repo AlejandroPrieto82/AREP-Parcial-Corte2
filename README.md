@@ -19,7 +19,9 @@
 **Resultado que mi servidor funciona**  
 ***NOTA***: Este resultado esta, pero sin conectarme a las EC2, ni al proxy, por lo que, si lo conectara al proxi, podria obtener una respuesta correcta  
 
-
 ![alt text](img/image-5.png)  
 **Resultado de que el endpoint si funciona y devuelve lo que debe devolver**
+
+![alt text](image.png)  
+**Este es mi codigo, para "forzar" a que me responda la maquina si alguna de las 2 instancias no sirve**
 
