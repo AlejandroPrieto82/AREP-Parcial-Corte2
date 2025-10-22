@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basics Math Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <h1>Fibonacci con ventana</h1>
+  <div>
+    <label for="number">Numero: <b>Tiene que ser mayor o igual a 2</b> </label>
+    <br />
+    <input type="number" id="number" value=2 min="2" />
+    <br />
+    <br />
+    <input type="button" value="fibwin" onclick=fibwin1(number.value) />
+  </div>
+  <br />
+  <br />
+
+  <div id="solution"></div>
+
+
+  <script>
+    url1 = "";
+    url2 = "http://localhost:8080";
+
+    function fibwin1(a) {
+      fetch(url1 + "/mathServices/fibwin?value=" + a, { method: "GET" })
+        .then((x) => x.text())
+        .then((x) => (document.getElementById('solution').innerHTML = x))
+        .catch(onrejectionhandled(fibwin2(a)));
+    }
+
+    function fibwin2(a) {
+      fetch(url2 + "/mathServices/fibwin?value=" + a, { method: "GET" })
+        .then((x) => x.text())
+        .then((x) => (document.getElementById('solution').innerHTML = x))
+        .catch(onrejectionhandled(fibwin1(a)));
+    }
+
+
+
+  </script>
+</body>
+
+</html>
